@@ -83,7 +83,7 @@ class Ahu:
 
                 page += 1
                 time.sleep(0.1)
-                progress = page*self.max_results+400
+                progress = page * self.max_results + 400
                 print(f"Progress:{progress} of {total_results}")
 
             except requests.exceptions.RequestException as e:
