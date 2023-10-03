@@ -15,7 +15,7 @@ $ pip install -i https://test.pypi.org/simple/ ahu
 ## Usage
 
 ```bash
->>> ahu_run -- db_name="my_db" --original_collection_name="No_Scholar" --filtered_collection_name="For_Moai" ----keep_abstract=False
+>>> ahu_run -- db_name="my_db" --original_collection_name="No_Scholar" --filtered_collection_name="For_Moai" --keep_abstract=False
 ```
 
 Output
