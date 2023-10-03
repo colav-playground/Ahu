@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+
+import argparse
+from ahu.Ahu import Ahu
+
+def main():
+    parser = argparse.ArgumentParser(
+        description='''Get and copy ImpactU API
+                        products to MongoDB collections''')
+    parser.add_argument('--db_name', type=str, default="ImpactU",
+                        help='Name of the MongoDB database')
+    parser.add_argument('--original_collection_name', type=str,
+                        default="No_Scholar",
+                        help='Name of the original collection')
+    parser.add_argument('--filtered_collection_name', type=str,
+                        default="For_Moai",
+                        help='Name of the final collection to implement Moai')
+    parser.add_argument('--keep_abstract', type=bool, default=True,
+                        help='Keep the abstract field (default: True).'
+                        'False if you want to delete')
+
+    args = parser.parse_args()
+    ahu = Ahu(args.db_name, args.original_collection_name,
+                                  args.filtered_collection_name)
+    ahu.fetch_data()
+    ahu.copy_data()
+    ahu.copy_data(args.keep_abstract)
+
+if __name__ == "__main__":
+    main()
