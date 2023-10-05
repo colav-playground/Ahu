@@ -10,7 +10,7 @@ Installation guide at https://www.mongodb.com/docs/manual/administration/install
 
 ## Install package
 ```bash
-$ pip install -i https://test.pypi.org/simple/ ahu
+$ pip install -i https://test.pypi.org/simple/ Ahu
 ```
 ## Usage
 
