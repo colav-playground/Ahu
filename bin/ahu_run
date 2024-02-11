@@ -24,7 +24,6 @@ def main():
                                   args.filtered_collection_name)
     ahu.fetch_data()
     ahu.copy_data()
-    ahu.copy_data(args.keep_abstract)
 
 if __name__ == "__main__":
     main()
