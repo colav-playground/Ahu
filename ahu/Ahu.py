@@ -131,7 +131,8 @@ class Ahu:
             except AttributeError:
                 publisher = ""
                 country = ""
-
+            if len(document.get('titles', [{}]))==0:
+                continue
             title = document.get('titles', [{}])[0].get('title', "")
 
             authors_list = document.get("authors", [])[:3]
